@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(),
                 afterPermission()
             } else {
                 showRequestPermissionDialog(
-                    "申请存储权限的原因是因为我需要",
+                    "申请设备读取权限的原因是因为我需要",
                     Manifest.permission.READ_PHONE_STATE
                 )
             }
@@ -132,7 +132,7 @@ class MainActivity : AppCompatActivity(),
     private fun showSettingsDialog() {
         AlertDialog.Builder(this)
             .setTitle("权限申请")
-            .setMessage("已永久拒绝，需要去设置->权限设置打开")
+            .setMessage("已永久拒绝，需要去设置->权限管理打开")
             .setPositiveButton("前往设置") { dialog, which ->
                 dialog.dismiss()
                 val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
